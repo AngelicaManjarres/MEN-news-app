@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="display-4 text-center m-5" style="letter-spacing: 5px;">All Our Lastest News</h3>
+
+        {{#each articles}}
+        <a class="link-dark text-decoration-none" href="/api/article/{{ title }}">
+            <!--Article container-->
+            <div class="row mt-5 mb-5">
+
+                <div class="column-left col-md-6 p-4">
+                    <img class="img-fluid" src="{{ urlToImage }}" alt="article-picture">
+                </div>
+                <div class="column-right col-md-6 p-4">
+                    <h2 class="Display-6">{{ title }}</h2>
+                    <span>Author: {{ author }}</span>
+                    <p class="lead">{{ description }}</p>
+                </div>
+            </div>
+            <!--End article container-->
+        </a>
+
+        {{/each }}
+</div>
